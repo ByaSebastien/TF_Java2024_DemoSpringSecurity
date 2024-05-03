@@ -15,7 +15,7 @@ public class DemoController {
         return ResponseEntity.ok("Hello world!!!");
     }
 
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/admin/hello")
     public ResponseEntity<String> helloAdmin(){
         return ResponseEntity.ok("Hello my master!");
